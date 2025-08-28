@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Link from "next/link"; 
 import { FaHome, FaHeart, FaBell, FaCog, FaEnvelope, FaUser } from "react-icons/fa";
 
 const Navbar = () => {
@@ -15,28 +16,28 @@ const Navbar = () => {
 
           {/* Menu centre */}
           <div className="hidden md:flex space-x-6 text-white text-lg font-semibold">
-            <button className="hover:bg-pink-600 px-3 py-2 rounded-md flex items-center space-x-1">
+            <Link href="/accueil" className="hover:bg-pink-600 px-3 py-2 rounded-md flex items-center space-x-1">
               <FaHome />
-            </button>
-            <button className="hover:bg-pink-600 px-3 py-2 rounded-md flex items-center space-x-1">
+            </Link>
+            <Link href="/favoris" className="hover:bg-pink-600 px-3 py-2 rounded-md flex items-center space-x-1">
               <FaHeart />
-            </button>
-            <button className="hover:bg-pink-600 px-3 py-2 rounded-md flex items-center space-x-1">
+            </Link>
+            <Link href="/notifications" className="hover:bg-pink-600 px-3 py-2 rounded-md flex items-center space-x-1">
               <FaBell />
-            </button>
+            </Link>
           </div>
 
           {/* Menu droite */}
           <div className="flex items-center space-x-4">
-            <button className="hover:bg-pink-600 p-2 rounded-full text-white">
+            <Link href="/parametres" className="hover:bg-pink-600 p-2 rounded-full text-white">
               <FaCog />
-            </button>
-            <button className="hover:bg-pink-600 p-2 rounded-full text-white">
+            </Link>
+            <Link href="/message" className="hover:bg-pink-600 p-2 rounded-full text-white">
               <FaEnvelope />
-            </button>
-            <button className="hover:bg-pink-600 p-2 rounded-full text-white">
+            </Link>
+            <Link href="/profil" className="hover:bg-pink-600 p-2 rounded-full text-white">
               <FaUser />
-            </button>
+            </Link>
           </div>
 
         </div>
