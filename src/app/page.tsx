@@ -1,8 +1,8 @@
-import Image from "next/image";
-import ConnexionP from "./pages/connexionP";
+
+import { redirect } from "next/navigation";
 
 export default function Home() {
-  return (
-   <ConnexionP />
-  );
+
+  redirect("/accueil")
+ 
 }
